@@ -27,6 +27,9 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
+
+          {/* Netlify auth widget: required as per netlify cms docs */}
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
