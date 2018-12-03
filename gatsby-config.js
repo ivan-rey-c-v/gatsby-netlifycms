@@ -3,6 +3,16 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
+    // posts
+    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `posts`,
+        path: `${__dirname}/src/pages/posts`,
+      },
+    },
+
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-source-filesystem`,
